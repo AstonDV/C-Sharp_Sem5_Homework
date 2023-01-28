@@ -39,7 +39,7 @@ void PrintResult(int[] array, int count)
 
 void main()
 {
-    int[] array = GetArray(10, 100, 1000);
+    int[] array = GetArray(10, 100, 999);
     int elementsCounted = CountElements(array);
     PrintResult(array, elementsCounted);
 }
