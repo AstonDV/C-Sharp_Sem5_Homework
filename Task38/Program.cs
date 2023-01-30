@@ -16,7 +16,7 @@ double[] GetArray(int size, int minValue, int maxValue)
 int SearchMax(double[] array)
 {
     int maxPosition = 0;
-    for (int i = 0; i < array.Length - 1; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         if(array[i] > array[maxPosition]) maxPosition = i;
     }
@@ -26,7 +26,7 @@ int SearchMax(double[] array)
 int SearchMin(double[] array)
 {
     int minPosition = 0;
-    for (int i = 0; i < array.Length - 1; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         if(array[i] < array[minPosition]) minPosition = i;
     }
@@ -57,7 +57,7 @@ void PrintResult(double[] array, int indexMinNum, int indexMaxNum)
 void main()
 {
     Console.Clear();
-    double[] array = GetArray(10, 1, 100);
+    double[] array = GetArray(10, -100, 100);
     int indexMaxNum = SearchMax(array);
     int indexMinNum = SearchMin(array);
     PrintArray(array);
