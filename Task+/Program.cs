@@ -32,13 +32,13 @@ int[] BubbleSort(int[] array, int argument)
     {
         for(int i = 0; i < array.Length; i++)
         {
-            for(int j = i + 1; j < array.Length; j++)
+            for(int j = 0; j < array.Length - i - 1; j++)
             {
-                if(array[i] > array[j])
+                if(array[j] > array[j + 1])
                 {
-                    temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
+                    temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
                 }
             }
         }
@@ -48,13 +48,13 @@ int[] BubbleSort(int[] array, int argument)
     {
        for(int i = 0; i < array.Length; i++)
         {
-            for(int j = i + 1; j < array.Length; j++)
+            for(int j = 0; j < array.Length - i - 1; j++)
             {
-                if(array[i] < array[j])
+                if(array[j] < array[j + 1])
                 {
-                    temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
+                    temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
                 }
             }
         }
